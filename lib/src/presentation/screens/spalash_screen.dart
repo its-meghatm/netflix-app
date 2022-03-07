@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:netflix/src/presentation/screens/home_page.dart';
+import 'package:netflix/src/presentation/screens/main_home_page.dart';
 
 import 'onboarding_Screen.dart';
 
@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(
-            builder: (_) => HomePage(),
+            builder: (_) => MainHomePage(),
           ),
           (route) => false);
     });
