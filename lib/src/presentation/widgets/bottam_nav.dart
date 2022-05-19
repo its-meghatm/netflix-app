@@ -27,7 +27,7 @@ class BottomNavigation extends StatelessWidget {
     ),
     BottomNavigationBarItem(
       icon: Icon(Icons.video_collection_outlined),
-      label: 'News & Hot',
+      label: 'New & Hot',
     ),
     BottomNavigationBarItem(
       icon: Icon(Icons.emoji_emotions),
