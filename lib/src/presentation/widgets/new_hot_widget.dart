@@ -18,16 +18,15 @@ class NewHotWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text("MAY",
+                Text(
+                  "MAY",
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey
-                  ),),
-                Text("27",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 35
-                  ),),
+                      fontWeight: FontWeight.bold, color: Colors.grey),
+                ),
+                Text(
+                  "27",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+                ),
               ],
             ),
           ),

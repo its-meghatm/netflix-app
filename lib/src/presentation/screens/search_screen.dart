@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:netflix/src/application/search/search_bloc.dart';
 import 'package:netflix/src/utils/constants.dart';
 import 'package:netflix/src/utils/utils.dart';
 
+import '../../application/downloads/downloads_bloc.dart';
 import '../widgets/search_idle.dart';
 import '../widgets/search_result.dart';
 import '../widgets/tittle.dart';
@@ -12,12 +15,15 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance?..addPersistentFrameCallback((_) {
+      BlocProvider.of<SearchBloc>(context).add(const Initialise());
+    });
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
-              pop(context) ;
+              pop(context);
             }),
         actions: [
           Padding(
@@ -44,7 +50,7 @@ class SearchScreen extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             kHeight,
-            Expanded(child: SearchResultWidget()),
+            Expanded(child: SearchIdle()),
           ],
         ),
       ),

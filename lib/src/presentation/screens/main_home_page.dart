@@ -16,7 +16,7 @@ class MainHomePage extends StatelessWidget {
     HomeScreen(),
     GameScreen(),
     NewsHotScreen(),
-    DownloadScreen(),
+    FastLaughScreen(),
     DownloadScreen()
   ];
 

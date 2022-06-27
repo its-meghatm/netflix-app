@@ -16,10 +16,9 @@ class DownloadScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // WidgetsBinding.instance!.addPersistentFrameCallback((timeStamp) {
-    //   BlocProvider.of<DownloadsBloc>(context)
-    //       .add(const DownloadsEvent.started());
-    // });
+    WidgetsBinding.instance!.addPersistentFrameCallback((timeStamp) {
+      BlocProvider.of<DownloadsBloc>(context).add(const Started());
+    });
     final Size size = MediaQuery.of(context).size;
     BlocProvider.of<DownloadsBloc>(context).add(const DownloadsEvent.started());
     return SafeArea(
@@ -66,6 +65,10 @@ class DownloadScreen extends StatelessWidget {
             ),
             BlocBuilder<DownloadsBloc, DownloadsState>(
               builder: (context, state) {
+                if (state.isLoading) {
+                  return Center(child: CircularProgressIndicator());
+                }
+
                 return SizedBox(
                   width: 200,
                   height: 300,

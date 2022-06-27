@@ -6,7 +6,7 @@ import '../../utils/constants.dart';
 
 class NumberCard extends StatelessWidget {
   final int index;
-  const NumberCard({Key? key,required this.index}) : super(key: key);
+  const NumberCard({Key? key, required this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,14 +35,13 @@ class NumberCard extends StatelessWidget {
           bottom: -13,
           left: 8,
           child: BorderedText(
-            strokeWidth: 10.0,
+              strokeWidth: 10.0,
               strokeColor: Colors.white,
-              child: Text("${index+1}",
-              style: TextStyle(fontSize: 90,
-                color: Colors.black
-              ),)),
+              child: Text(
+                "${index + 1}",
+                style: TextStyle(fontSize: 90, color: Colors.black),
+              )),
         )
-
       ],
     );
   }

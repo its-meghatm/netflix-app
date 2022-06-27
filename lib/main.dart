@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflix/src/application/downloads/downloads_bloc.dart';
 import 'package:netflix/src/application/fastLaugh/fastlaugh_bloc.dart';
+import 'package:netflix/src/application/search/search_bloc.dart';
 import 'package:netflix/src/domain/dependency/injectable.dart';
 import 'package:netflix/src/presentation/screens/main_home_page.dart';
 import 'package:netflix/src/presentation/screens/spalash_screen.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (ctx) => getIt<DownloadsBloc>()),
-        BlocProvider(create: (ctx) => getIt<FastlaughBloc>())
+        BlocProvider(create: (ctx) => getIt<FastlaughBloc>()),
+        BlocProvider(create: (ctx) => getIt<SearchBloc>()),
       ],
       child: MaterialApp(
         title: 'Netflix Clone',

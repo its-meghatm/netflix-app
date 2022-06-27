@@ -8,28 +8,30 @@ import '../screens/search_screen.dart';
 class AppBarWidget extends StatelessWidget {
   final String title;
 
-  const AppBarWidget({Key? key,required this.title}) : super(key: key);
+  const AppBarWidget({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(title,
-        style: TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.bold
-        ),),
+        Text(
+          title,
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
         Spacer(),
-        IconButton(onPressed: () {
-          push(
-              context, SearchScreen());
-        },
-        icon: Icon(Icons.search)),
+        IconButton(
+            onPressed: () {
+              push(context, SearchScreen());
+            },
+            icon: Icon(Icons.search)),
         kWidth,
-        Container(height: 20,
+        Container(
+          height: 20,
           width: 20,
-          color: Colors.pink,),
-        kWidth,      ],
+          color: Colors.pink,
+        ),
+        kWidth,
+      ],
     );
   }
 }

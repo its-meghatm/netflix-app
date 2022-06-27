@@ -15,9 +15,7 @@ class BackgroundImage extends StatelessWidget {
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image: NetworkImage(
-                      "https://cdn.pastemagazine.com/www/system/images/photo_albums/best-movie-posters-2016/large/moonlight-ver2-xlg.jpg?1384968217"                      )
-              )
-          ),
+                      "https://cdn.pastemagazine.com/www/system/images/photo_albums/best-movie-posters-2016/large/moonlight-ver2-xlg.jpg?1384968217"))),
         ),
         Positioned(
           bottom: 0,
@@ -29,22 +27,30 @@ class BackgroundImage extends StatelessWidget {
               Column(
                 children: [
                   Icon(Icons.add),
-                  Text("Play",
+                  Text(
+                    "Play",
                   )
                 ],
               ),
-              TextButton.icon(onPressed: (){},
-                icon: Icon(Icons.play_arrow,color: Colors.black,),
-                label: Text("Play",
-                  style: TextStyle(color: Colors.black,
-                      fontWeight: FontWeight.bold),),
+              TextButton.icon(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.play_arrow,
+                  color: Colors.black,
+                ),
+                label: Text(
+                  "Play",
+                  style: TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                ),
                 style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.white)
-                ),),
+                    backgroundColor: MaterialStateProperty.all(Colors.white)),
+              ),
               Column(
                 children: [
                   Icon(Icons.info_outline),
-                  Text("Info",
+                  Text(
+                    "Info",
                   )
                 ],
               ),
@@ -52,7 +58,6 @@ class BackgroundImage extends StatelessWidget {
           ),
         )
       ],
-    )
-    ;
+    );
   }
 }
